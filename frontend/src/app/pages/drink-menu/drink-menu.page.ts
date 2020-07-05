@@ -22,8 +22,8 @@ export class DrinkMenuPage implements OnInit {
     this.drinks.getDrinks();
   }
 
-  async openForm(activedrink: Drink = null) {
-    if (!this.auth.can('get:drinks-detail')) {
+async openForm(activedrink: Drink = null) {
+    if (!this.auth.can('post:drinks')) {
       return;
     }
 
